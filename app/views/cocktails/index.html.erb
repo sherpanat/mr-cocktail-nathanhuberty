@@ -4,7 +4,7 @@
 <br>
 <ul>
   <% @cocktails.each do |cocktail| %>
-    <li><%= cocktail.name %> | <%= link_to "Détails", cocktail_path(cocktail.id) %> | <%= link_to "Ajouter une dose", new_cocktail_dose_path(cocktail.id) %></li>
+    <li><%= cocktail.name %> | <%= link_to "Détails", cocktail_path(cocktail.id) %></li>
   <% end %>
 </ul>
 

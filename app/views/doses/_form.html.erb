@@ -1,0 +1,10 @@
+
+<h3>Ajouter une dose dans votre cocktail</h3>
+
+<p>
+  <%= simple_form_for [cocktail, dose] do |f| %>
+    <%= f.input :description, hint: 'en cl ou ml' %>
+    <%= f.association :ingredient, collection: Ingredient.all %>
+    <%= f.button :submit %>
+  <% end %>
+</p>

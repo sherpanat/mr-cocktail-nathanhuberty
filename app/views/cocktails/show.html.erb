@@ -1,5 +1,12 @@
 <h1><%= @cocktail.name %></h1>
 <br>
-<%= link_to "Ajouter une dose", new_cocktail_dose_path(@cocktail.id) %>
+<ul>
+  <% @cocktail.doses.each do |dose| %>
+    <li><%= dose.ingredient.name %> <%= dose.description %></li>
+  <% end %>
+</ul>
+
+<%= render '/doses/form', dose: @dose, cocktail: @cocktail %>
+
 <br>
 <%= link_to "Retour à la liste", '/' %>

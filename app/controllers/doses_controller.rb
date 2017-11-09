@@ -7,7 +7,7 @@ class DosesController < ApplicationController
   def create
     @dose = Dose.new(dose_params)
     @dose.cocktail = @cocktail
-    return render :new unless @dose.save
+    return render 'cocktails/show' unless @dose.save
     redirect_to @cocktail
   end
 

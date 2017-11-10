@@ -3,6 +3,7 @@
 <h3>
   <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name, hint: 'Check if it does not exist first' %>
+    <%= f.input :photo, as: :attachinary %>
     <%= f.button :submit %>
   <% end %>
 </h3>

@@ -5,6 +5,6 @@
   <%= simple_form_for [cocktail, dose] do |f| %>
     <%= f.input :description, hint: 'en cl ou ml' %>
     <%= f.association :ingredient, collection: Ingredient.all %>
-    <%= f.button :submit, wrapper_html: { class: 'btn-custom' } %>
+    <%= f.submit "Create Dose", class: "btn btn-info" %>
   <% end %>
 </p>
